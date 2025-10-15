@@ -3,7 +3,10 @@ __pycache__/
 *.pkl
 *.npy
 *.csv
-.dvc/
+# Ignore DVC cache but keep config
+.dvc/cache/
+!.dvc/config
+
 .vscode/
 env/
 .venv/
