@@ -41,11 +41,11 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html", feature_meta=feature_meta)
-# Student A (feature-login) change
 @app.route("/login")
 def login():
-    print("Login route - implemented by Umer")
-    return "Login Page"
+    # Combined: preserved prints from both students and unified message
+    print("Login route - implemented by Umer and updated by collaborator")
+    return "Unified Login Page"
 
 @app.route("/predict", methods=["POST"])
 def predict():
