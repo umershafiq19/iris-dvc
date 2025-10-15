@@ -41,6 +41,11 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html", feature_meta=feature_meta)
+# Student B (feature-dashboard) change (intentionally conflicting)
+@app.route("/login")
+def login():
+    print("Login route - modified by another student")
+    return "Dashboard Login"
 
 @app.route("/predict", methods=["POST"])
 def predict():
